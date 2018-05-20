@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: eureka-service
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Eureka service
+    version: @project.version@
+    artifact: @project.artifactId@
